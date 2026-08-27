@@ -26,25 +26,25 @@ These are the **real Aster screenshots from the project**, showing the dashboard
 ### Dashboard
 
 <p align="center">
-  <img src="screenshots/dashboard-dark.jpg" alt="Aster dark dashboard" width="100%">
+  <img src="screenshots/dashboard-dark.png" alt="Aster dark dashboard" width="100%">
 </p>
 
 ### Search
 
 <p align="center">
-  <img src="screenshots/search-dark.jpg" alt="Aster search suggestions" width="100%">
+  <img src="screenshots/search-dark.png" alt="Aster search suggestions" width="100%">
 </p>
 
 ### Light Theme & Settings
 
 <p align="center">
-  <img src="screenshots/settings-light.jpg" alt="Aster light theme and settings" width="100%">
+  <img src="screenshots/settings-light.png" alt="Aster light theme and settings" width="100%">
 </p>
 
 ### Focus Timer
 
 <p align="center">
-  <img src="screenshots/focus-timer.jpg" alt="Aster expanded focus timer" width="720">
+  <img src="screenshots/focus-timer.png" alt="Aster expanded focus timer" width="720">
 </p>
 
 ## Features
