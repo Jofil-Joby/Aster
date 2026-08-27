@@ -21,20 +21,31 @@ Designed to stay useful without becoming another productivity app that requires 
 
 ## Preview
 
-The Aster interface is intentionally minimal: a large clock and date, centered search, quick access, and a compact dashboard of useful tools.
+These are the **real Aster screenshots from the project**, showing the dashboard, search interaction, settings/light theme, and expanded Focus timer.
+
+### Dashboard
 
 <p align="center">
-  <img src="assets/aster-github-preview.svg" alt="Aster dashboard preview" width="900">
+  <img src="screenshots/dashboard-dark.jpg" alt="Aster dark dashboard" width="100%">
 </p>
 
-For the strongest repository showcase, the project also has dedicated views for the Light theme/settings and expanded Focus mode. Add your real screenshots as:
+### Search
 
-```text
-screenshots/
-├── dashboard-dark.png
-├── settings-light.png
-└── focus-timer.png
-```
+<p align="center">
+  <img src="screenshots/search-dark.jpg" alt="Aster search suggestions" width="100%">
+</p>
+
+### Light Theme & Settings
+
+<p align="center">
+  <img src="screenshots/settings-light.jpg" alt="Aster light theme and settings" width="100%">
+</p>
+
+### Focus Timer
+
+<p align="center">
+  <img src="screenshots/focus-timer.jpg" alt="Aster expanded focus timer" width="720">
+</p>
 
 ## Features
 
@@ -139,8 +150,8 @@ Aster currently runs as an unpacked Chrome extension.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Jofil-Joby/Aster-A-Personalized-Chrome-New-Tab-Dashboard-and-Productivity-Extension.git
-cd Aster-A-Personalized-Chrome-New-Tab-Dashboard-and-Productivity-Extension
+git clone https://github.com/Jofil-Joby/Aster.git
+cd Aster
 ```
 
 ### 2. Open Chrome Extensions
