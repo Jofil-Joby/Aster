@@ -23,19 +23,18 @@ Designed to stay useful without becoming another productivity app that requires 
 
 The Aster interface is intentionally minimal: a large clock and date, centered search, quick access, and a compact dashboard of useful tools.
 
-### Dashboard
+<p align="center">
+  <img src="assets/aster-github-preview.svg" alt="Aster dashboard preview" width="900">
+</p>
 
-> Add the main dashboard screenshot as `screenshots/dashboard-dark.png`.
+For the strongest repository showcase, the project also has dedicated views for the Light theme/settings and expanded Focus mode. Add your real screenshots as:
 
-### Light Theme & Settings
-
-> Add the Light theme/settings screenshot as `screenshots/settings-light.png`.
-
-### Focus Mode
-
-> Add the expanded Focus timer screenshot as `screenshots/focus-timer.png`.
-
-These three views are the best set for presenting the project on GitHub: **product → customization → functionality**.
+```text
+screenshots/
+├── dashboard-dark.png
+├── settings-light.png
+└── focus-timer.png
+```
 
 ## Features
 
