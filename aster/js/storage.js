@@ -1,0 +1,3 @@
+export const defaults={settings:{name:"",searchEngine:"google",theme:"midnight",accent:"blue",focusMins:25,shortMins:5,longMins:15},shortcuts:[],tasks:[],note:{text:"",updatedAt:null},today:[],timerState:{mode:"focus",remainingSeconds:1500,endAt:null,sessionsToday:0,date:""}};
+const clone=o=>JSON.parse(JSON.stringify(o));
+export const Storage={async getAll(){const r=await chrome.storage.local.get(null);return Object.fromEntries(Object.entries(defaults).map(([k,v])=>[k,structuredClone(r[k]??v)]))},async set(key,value){await chrome.storage.local.set({[key]:value})},async patch(key,value){const d=await this.getAll();await this.set(key,{...d[key],...value})},async clear(){await chrome.storage.local.clear()}};
