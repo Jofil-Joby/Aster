@@ -1,75 +1,141 @@
 # Aster
 
-Aster is a personalized Chrome new-tab dashboard designed to turn the browser's default start page into a focused workspace for everyday tasks, notes, shortcuts, scheduling, and focused work.
+> **A focused Chrome new-tab dashboard for a calmer start to every session.**
 
-Instead of replacing the new tab with another collection of distractions, Aster keeps the interface intentionally compact and puts the things you need most often in one place.
+Aster transforms Chrome's default new tab into a lightweight personal workspace for **search, tasks, planning, notes, shortcuts, and focused work**.
+
+Designed to stay useful without becoming another productivity app that requires twelve settings pages and a subscription to remember your own name.
+
+## ✦ What Aster Does
+
+- **Search** the web from one focused command bar
+- **Quick access** to the sites you use most
+- **Tasks** for lightweight daily to-dos
+- **Today** for time-based planning
+- **Notes** for temporary thoughts and reminders
+- **Focus timer** with Focus, Short Break, and Long Break modes
+- **Midnight & Light themes** with accent customization
+- **Local persistence** through Chrome Storage
+- **Import / Export** for backing up your Aster data
+- **First-run onboarding** for a personalized setup
+
+## Preview
+
+The Aster interface is intentionally minimal: a large clock and date, centered search, quick access, and a compact dashboard of useful tools.
+
+### Dashboard
+
+> Add the main dashboard screenshot as `screenshots/dashboard-dark.png`.
+
+### Light Theme & Settings
+
+> Add the Light theme/settings screenshot as `screenshots/settings-light.png`.
+
+### Focus Mode
+
+> Add the expanded Focus timer screenshot as `screenshots/focus-timer.png`.
+
+These three views are the best set for presenting the project on GitHub: **product → customization → functionality**.
 
 ## Features
 
-- **Personalized new-tab dashboard** — Aster replaces Chrome's default new-tab page with a custom dashboard.
-- **Quick access shortcuts** — Add, edit, and organize shortcuts to frequently used websites.
-- **Web search** — Search directly from the dashboard with support for Google, Bing, DuckDuckGo, and Brave.
-- **Search commands** — Use shortcuts such as `g`, `yt`, and `gh` to route searches directly to Google, YouTube, or GitHub.
-- **Task management** — Create tasks, mark them complete, and keep completed items available for reference.
-- **Today planner** — Add time-based entries to keep track of what is happening throughout the day.
-- **Notes** — Keep a lightweight note directly on the new-tab page.
-- **Focus timer** — Use configurable Focus, Short Break, and Long Break sessions with preset or custom durations.
-- **Themes** — Switch between Midnight and Light appearances and customize the dashboard accent.
-- **Persistent data** — Shortcuts, tasks, notes, Today entries, and settings are stored locally using Chrome storage.
-- **Import and export** — Export Aster data as JSON and import it when moving or restoring a setup.
-- **Onboarding** — A first-run setup helps configure the user's name and preferred appearance.
-- **Offline-first interface** — The dashboard itself does not require a backend or account to manage personal data.
+### Search & Commands
 
-## Screenshots
+Search directly from the new tab and use command prefixes to route searches to specific services.
 
-Add screenshots of the dashboard here once the final UI is ready. Keeping the repository's README focused on the actual interface makes the project easier to evaluate without turning the page into a marketing brochure.
+```text
+hello world        → selected search engine
+g hello world      → Google
+yt javascript      → YouTube
+gh chrome api      → GitHub
+```
+
+Supported search engines include **Google, Bing, DuckDuckGo, and Brave**.
+
+### Quick Access
+
+Keep frequently visited websites one click away. Shortcuts can be added and edited directly from the dashboard.
+
+### Tasks
+
+A simple task list for the things that need doing today, without turning a five-item to-do list into a project-management ceremony.
+
+### Today
+
+Add time-based entries to build a lightweight daily schedule directly into the new-tab page.
+
+### Notes
+
+A persistent scratchpad for information you'll need later.
+
+### Focus Timer
+
+A built-in focus workflow with:
+
+- Focus sessions
+- Short breaks
+- Long breaks
+- Preset durations
+- Custom durations
+- Pause and reset controls
+
+### Themes
+
+Choose between:
+
+- Midnight
+- Light
+- Custom accent colors
+
+Theme values are driven by CSS variables, allowing the interface to stay visually consistent when the appearance changes.
 
 ## Tech Stack
 
-- HTML5
-- CSS3
-- JavaScript (ES Modules)
-- Chrome Extensions Manifest V3
-- Chrome Storage API
-- Chrome Alarms API
+| Technology | Use |
+|---|---|
+| HTML5 | Dashboard structure |
+| CSS3 | Layout, themes, components, responsive styling |
+| JavaScript | Application logic and UI behavior |
+| ES Modules | Modular client-side architecture |
+| Chrome Manifest V3 | Extension platform |
+| Chrome Storage API | Local persistence |
+| Chrome Alarms API | Timer/background behavior |
 
-The extension uses a service worker for background functionality and a custom `chrome_url_overrides.newtab` page for the dashboard. fileciteturn4file0
+## Architecture
 
-## Project Structure
+Aster keeps its functionality split into small browser-native modules:
 
 ```text
-.
-├── LICENSE
-└── aster/
-    ├── assets/
-    │   └── icons/
-    ├── css/
-    │   ├── components.css
-    │   ├── layout.css
-    │   ├── refine.css
-    │   ├── search-polish.css
-    │   └── variables.css
-    ├── js/
-    │   ├── app.js
-    │   ├── background.js
-    │   ├── clock.js
-    │   ├── notes.js
-    │   ├── search.js
-    │   ├── settings.js
-    │   ├── shortcuts.js
-    │   ├── storage.js
-    │   ├── tasks.js
-    │   ├── timer.js
-    │   └── today.js
-    ├── index.html
-    └── manifest.json
+aster/
+├── assets/
+│   └── icons/
+├── css/
+│   ├── variables.css
+│   ├── layout.css
+│   ├── components.css
+│   ├── refine.css
+│   └── search-polish.css
+├── js/
+│   ├── app.js
+│   ├── background.js
+│   ├── clock.js
+│   ├── notes.js
+│   ├── search.js
+│   ├── settings.js
+│   ├── shortcuts.js
+│   ├── storage.js
+│   ├── tasks.js
+│   ├── timer.js
+│   └── today.js
+├── index.html
+└── manifest.json
 ```
 
-The current project is a lightweight static extension with separate modules for tasks, notes, search, settings, shortcuts, storage, the focus timer, and Today entries. fileciteturn3file0
+The new-tab dashboard is registered through Chrome's `chrome_url_overrides.newtab`, while background behavior is handled by the extension service worker.
 
 ## Installation
 
-Aster can currently be installed locally as an unpacked Chrome extension. No build system or package manager is required.
+Aster currently runs as an unpacked Chrome extension.
 
 ### 1. Clone the repository
 
@@ -80,86 +146,94 @@ cd Aster-A-Personalized-Chrome-New-Tab-Dashboard-and-Productivity-Extension
 
 ### 2. Open Chrome Extensions
 
-Navigate to:
+Go to:
 
 ```text
 chrome://extensions
 ```
 
-Enable **Developer mode** in the top-right corner.
+Enable **Developer mode**.
 
 ### 3. Load Aster
 
-Select **Load unpacked** and choose the `aster` directory from the cloned repository.
+Click **Load unpacked** and select the `aster` folder.
 
 ### 4. Open a new tab
 
-Open a new Chrome tab. Aster should now appear as the new-tab page.
+Aster should now replace Chrome's default new-tab page.
 
 ## Permissions
 
-Aster requests the following Chrome permissions:
+Aster uses only the permissions required for its core functionality:
 
-| Permission | Purpose |
+| Permission | Why it is used |
 |---|---|
-| `storage` | Store dashboard data such as tasks, notes, shortcuts, and settings locally. |
-| `alarms` | Support timer-related background behavior. |
+| `storage` | Save tasks, notes, shortcuts, settings, and other local data |
+| `alarms` | Support timer-related background behavior |
 
-The extension also uses Chrome's `newtab` override to replace the default new-tab page. These permissions are defined in the extension manifest. fileciteturn4file0
+The extension also overrides Chrome's new-tab page through Manifest V3 configuration.
 
-## Data & Privacy
+## Privacy
 
-Aster is designed around local browser storage rather than a user account or application backend.
+Aster is designed around local browser storage and does not require an account for its core functionality.
 
-Personal dashboard data such as tasks, notes, shortcuts, and preferences is stored through Chrome's storage API. The extension does not require a sign-in flow to use its core functionality.
+Tasks, notes, shortcuts, settings, and other dashboard data are stored through Chrome's storage API. Search requests are sent to the search provider selected by the user, as expected from a web-search feature.
 
-Search functionality may communicate with the selected search provider, and search suggestions use Google's suggestion endpoint as configured by the extension's content security policy. fileciteturn4file0
-
-## Customization
-
-Aster provides settings for:
-
-- User name
-- Search engine
-- Theme
-- Accent color
-- Focus duration
-- Short-break duration
-- Long-break duration
-
-The dashboard also provides JSON import/export so the user's Aster data can be backed up or transferred manually.
+There is no application backend or sign-in requirement for the dashboard.
 
 ## Development
 
-There is currently no dependency installation or build step. The extension is implemented with browser-native HTML, CSS, and JavaScript modules.
+Aster has no dependency installation or build step. It uses browser-native HTML, CSS, and JavaScript modules.
 
-For development:
+### Development workflow
 
-1. Make changes inside the `aster` directory.
+1. Edit files inside `aster/`.
 2. Open `chrome://extensions`.
-3. Reload the Aster extension after making changes.
-4. Open a new tab to verify the result.
-
-When changing the extension manifest, make sure the referenced files and permissions remain consistent with the actual project structure.
+3. Click **Reload** on Aster.
+4. Open a new tab and test the change.
+5. Check both Midnight and Light themes when changing visual styles.
 
 ## Roadmap
 
-Potential future improvements include:
+- [ ] Chrome Web Store release
+- [ ] Drag-and-drop shortcut organization
+- [ ] Improved keyboard navigation
+- [ ] Expanded accessibility support
+- [ ] Additional productivity integrations
+- [ ] More dashboard customization
+- [ ] Optional cross-device synchronization
+- [ ] Automated extension testing
 
-- Chrome Web Store release
-- Drag-and-drop shortcut organization
-- More dashboard customization options
-- Additional productivity integrations
-- Improved accessibility and keyboard navigation
-- More flexible timer workflows
-- Optional synchronization across devices
+## Design Direction
+
+Aster follows a simple visual principle:
+
+> **Less interface, more focus.**
+
+The UI uses a restrained palette, large typography for time, subtle borders, compact controls, and a warm accent color to make important actions noticeable without turning the dashboard into a colorful control panel.
+
+## Contributing
+
+Contributions, bug reports, and UI ideas are welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the development and contribution guidelines.
+
+## Changelog
+
+See [`CHANGELOG.md`](CHANGELOG.md) for notable project changes.
 
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License. See [`LICENSE`](LICENSE) for details.
 
 ## Author
 
 **Jofil Joby**
 
-GitHub: [@Jofil-Joby](https://github.com/Jofil-Joby)
+- GitHub: [@Jofil-Joby](https://github.com/Jofil-Joby)
+
+---
+
+<div align="center">
+
+**Aster** · A calmer place to begin.
+
+</div>
