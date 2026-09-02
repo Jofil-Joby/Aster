@@ -5,14 +5,24 @@ Thumbs.db
 # Editor settings
 .vscode/
 .idea/
+*.iml
 
 # Logs and temporary files
 *.log
 *.tmp
 *.temp
 
+# Local environment files
+.env
+.env.*
+!.env.example
+
 # Local development artifacts
 coverage/
 dist/
 build/
 node_modules/
+
+# Package manager and runtime caches
+.npm/
+.cache/
