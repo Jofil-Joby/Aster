@@ -4,11 +4,21 @@ All notable changes to Aster are documented here.
 
 ## Unreleased
 
-- Repository presentation and documentation improvements
-- GitHub project preview artwork
-- Contribution guidelines
+### Added
+
+- GitHub Actions extension validation
+- Bug-report and feature-request templates
+- Security reporting guidance
+- Architecture documentation
+
+### Changed
+
+- Refined repository README and installation documentation
+- Improved project structure and repository presentation
 
 ## 1.0.0
+
+### Added
 
 - Personalized Chrome new-tab dashboard
 - Quick access shortcuts
@@ -24,4 +34,3 @@ All notable changes to Aster are documented here.
 - Local Chrome storage
 - JSON import and export
 - First-run onboarding
-

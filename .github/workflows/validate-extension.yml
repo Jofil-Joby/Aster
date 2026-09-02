@@ -1,0 +1,39 @@
+name: Validate Extension
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate Aster
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate manifest JSON
+        run: node -e "JSON.parse(require('fs').readFileSync('aster/manifest.json', 'utf8')); console.log('manifest.json is valid JSON')"
+
+      - name: Check JavaScript syntax
+        run: |
+          find aster/js -type f -name '*.js' -print0 | xargs -0 -n1 node --check
+
+      - name: Verify required extension files
+        run: |
+          test -f aster/index.html
+          test -f aster/manifest.json
+          test -f aster/js/background.js
+          test -f aster/assets/icons/aster-128.png
