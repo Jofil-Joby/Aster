@@ -329,6 +329,8 @@ Aster is licensed under the [MIT License](LICENSE).
 
 **Aster** · A calmer place to begin.
 
-Built by [Jofil Joby](https://github.com/Jofil-Joby) · [GitHub profile](https://github.com/Jofil-Joby?tab=repositories) · [Junex](https://github.com/Jofil-Joby/Junex)
+Built by [Jofil Joby](https://github.com/Jofil-Joby) · [All repositories](https://github.com/Jofil-Joby?tab=repositories)
+
+[Junex](https://github.com/Jofil-Joby/Junex) · [PersonalOS](https://github.com/Jofil-Joby/PersonalOS) · [Real-Time Leaderboard](https://github.com/Jofil-Joby/Real-Time-Leaderboard)
 
 </div>
